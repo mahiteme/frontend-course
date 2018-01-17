@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>drag drop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 10px;
+    }
+    .main-div {
+      float: left;
+      width: 30%;
+      height: 40%;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    #div1, #div2 {
+      float: left;
+      width: 90%;
+      height: 30%;
+      padding: 10px;
+      border: 1px solid black;
+    }
+    #div1 {
+      background-color: black;
+      color: white;
+    }
+    #div2 {
+      background-color: green;
+      color: white;
+    }
+    .center-bold {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+</head>
+<body>
+  <p>Drag the products you want to buy to shopping basket.</p>
+  <div class="main-div">
+    <p class="center-bold">Products</p>
+    <hr>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">Iphone X</p>
+      <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">Motorola Moto X</p>
+      <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">Samsung Galaxy J5</p>
+      <p draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">Nokia 8</p>
+    </div>
+  </div>
+
+  <div class="main-div">
+    <p class="center-bold">shoping basket</p>
+    <hr>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </div>
+
+</body>
+</html>
