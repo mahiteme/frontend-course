@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    input {
+     width: 97%;
+     padding: 4px;
+     margin: 10px;
+     }
+     select {
+     width: 95%;
+     padding: 4px;
+     margin: 10px 10px;
+     }
+  </style>
+</head>
+<body>
+
+  <form action="/action_page.php">
+    First name:<br>
+    <input type="text" name="firstname" value="John">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Johnson ">
+    <br>
+    Date of birth:<br>
+    <input type="datetime-local" name="bdaytime" value="16/11/2017 ">
+    <br>
+    Gender:<br>
+    <select name="cars">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <br>
+    Email:<br>
+    <input type="email" name="email" value="j.johnson@gmail.com">
+    <br>
+    Homepage:<br>
+    <input type="text" name="Homepage" value="www.johnhohnson.net">
+    <br>
+    Favorite color:<br>
+    <input type="color" value="#ff0000">
+    <br>
+
+    <button type="button" onclick="alert('saved')">Save</button>
+  </form>
+
+</body>
+</html>
