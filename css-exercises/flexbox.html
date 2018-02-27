@@ -8,12 +8,17 @@
     .container {
       display: flex;
       flex-wrap: nowrap;
+      justify-content: center;
     }
     .container > div {
       border: 2px solid lightgray;
       margin: 20px;
       padding: 20px;
       text-align: center;
+    }
+    h1 {
+      text-align: center;
+      color: lightgray;
     }
     @media screen and (max-width: 600px) {
       .container {
@@ -32,7 +37,7 @@
   <div class="container">
     <div>This is the first section</div>
     <div>Here is some more text</div>
-    <div>Text continues in this section</div>
+    <div class="middle-div">Text continues in this section</div>
     <div>Is there more coming?</div>
     <div>This is the final section</div>
   </div>
