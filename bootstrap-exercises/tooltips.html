@@ -7,47 +7,50 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <title>Tooltips</title>
   </head>
+  
   <body>
       <h1>Tooltips exercise</h1>
     <form>
         <div class="form-row col-md-12">
             <div class="form-group col-md-6">
                 <label for="fistName">First name</label>
-                <input type="text" class="form-control" id="firstName" aria-describedby="fistNameHelp" placeholder="Enter your first name">    
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter your first name">    
             </div>
             <div class="form-group col-md-6">
                 <label for="LastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp" placeholder="Enter your last name">    
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter your last name">    
             </div>
         </div>
 
         <div class="form-group col-md-12">
             <label for="streetAddress">Street address</label>
-            <input type="text" class="form-control" id="streetAddress" aria-describedby="streetAddressHelp" placeholder="Enter street address">    
+            <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter street address">    
         </div>
 
         <div class="form-row col-md-12">
             <div class="form-group col-md-6">
                 <label for="postalCode">Postal code</label>
-                <input type="text" class="form-control" id="postalCode" aria-describedby="postalCodeHelp" placeholder="Enter postal code">    
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter postal code">    
             </div>
             <div class="form-group col-md-6">
                 <label for="country">Country</label>
-                <input type="text" class="form-control" id="country" aria-describedby="countryHelp" placeholder="Enter Country">    
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter Country">    
             </div>
         </div>
 
         <div class="form-row col-md-12">
              <div class="form-group col-md-6">
                 <label for="company">Company</label>
-                <input type="text" class="form-control" id="company" aria-describedby="companyHelp" placeholder="Enter Company">    
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter Company">    
             </div>
             <div class="form-group col-md-6">
                 <label for="emailAddress">Email address</label>
-                <input type="email" class="form-control" id="emailAddress" aria-describedby="emailAddressHelp" placeholder="Enter email">
+                <input type="email" class="form-control" data-toggle="tooltip" data-placement="top" title="Enter email">
             </div> 
         </div>
 
@@ -71,18 +74,19 @@
                 </div>
               </fieldset>
 
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-1"  data-toggle="tooltip" data-placement="top" title="submit">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-        
       </form>
 
     <!-- Optional JavaScript -->
+    <script>
+            $(document).ready(function(){
+       $('[data-toggle="tooltip"]').tooltip('update');   
+    });
+         </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+     </body>
 </html>
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <title>drag drop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +8,7 @@
     * {
       margin: 10px;
     }
+
     .main-div {
       float: left;
       width: 30%;
@@ -16,21 +18,26 @@
       border: 1px solid black;
       text-align: center;
     }
-    #div1, #div2 {
+
+    #div1,
+    #div2 {
       float: left;
       width: 90%;
       height: 30%;
       padding: 10px;
       border: 1px solid black;
     }
+
     #div1 {
       background-color: black;
       color: white;
     }
+
     #div2 {
       background-color: green;
       color: white;
     }
+
     .center-bold {
       text-align: center;
       font-weight: bold;
@@ -39,18 +46,21 @@
 
   <script>
     function allowDrop(ev) {
-        ev.preventDefault();
+      ev.preventDefault();
     }
+
     function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
+      ev.dataTransfer.setData("text", ev.target.id);
     }
+
     function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
     }
   </script>
 </head>
+
 <body>
   <p>Drag the products you want to buy to shopping basket.</p>
   <div class="main-div">
@@ -71,4 +81,5 @@
   </div>
 
 </body>
+
 </html>
